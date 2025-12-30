@@ -1,6 +1,7 @@
 import React from "react";
 import assets from "../assets/assets";
 import Title from "./Title.jsx"
+import ServiceCard from "./ServiceCard.jsx";
 
 const Services=()=>{
 
@@ -41,6 +42,12 @@ const Services=()=>{
             <img src={assets.bgImage2} alt="" className="absolute -top-110 -left-70 -z-1 dark:hidden" />
 
             <Title title="How can we Help?" desc="From strategy to execution,we carft digital solutions hath movw your bussiness forward"/>
+
+            <div>
+                {servicesData.map((service,index)=>(
+                    <ServiceCard key={index}/>
+                ))}
+            </div>
         </div>
     )
 }
