@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 
-const App=()=>{
+const App = () => {
+  const [theme, setTheme] = useState("light");
 
-    const[theme,setTheme]=useState("light")
- 
-    return(
-   <div>
-    <Navbar theme={theme} setTheme={setTheme} />
-   </div>
- )
-}
+  return (
+    <div className={theme === "dark" ? "dark" : ""}>
+      <div className="dark:bg-black relative">
+        <Navbar theme={theme} setTheme={setTheme} />
+      </div>
+    </div>
+  );
+};
 export default App
