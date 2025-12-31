@@ -15,6 +15,7 @@ const App = () => {
         <Hero />
         <TrustedBy />
         <Services />
+    
       </div>
     </div>
   );

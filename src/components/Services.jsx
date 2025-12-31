@@ -43,9 +43,9 @@ const Services=()=>{
 
             <Title title="How can we Help?" desc="From strategy to execution,we carft digital solutions hath movw your bussiness forward"/>
 
-            <div>
+            <div className="flex flex-col md:grid grid-cols-2">
                 {servicesData.map((service,index)=>(
-                    <ServiceCard key={index}/>
+                    <ServiceCard key={index} service={service} index={index}/>
                 ))}
             </div>
         </div>
