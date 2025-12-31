@@ -1,19 +1,22 @@
 import React from "react";
+import assets from "../assets/assets";
 
-const Footer=()=>{
+const Footer=({theme,setTheme})=>{
     return(
         
-
-<footer class="bg-neutral-primary-soft">
+<footer class="bg-neutral-primary-soft mt-6">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 dark:text-white">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
               <a href="https://flowbite.com/" class="flex items-center">
-                  <img src="https://flowbite.com/docs/images/logo.svg" class="h-7 me-3" alt="FlowBite Logo" />
-                  <span class="text-heading self-center text-2xl font-semibold whitespace-nowrap">Flowbite</span>
+                  <img
+                  src={theme === "dark" ? assets.logo_dark : assets.logo}
+                   className="w-32 sm:w-40"
+                    alt="logo"
+      />
               </a>
           </div>
-          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 text-sm text-gray-500">
               <div>
                   <h2 class="mb-6 text-sm font-semibold text-heading uppercase">Resources</h2>
                   <ul class="text-body font-medium">
@@ -51,7 +54,7 @@ const Footer=()=>{
       </div>
       <hr class="my-6 border-default sm:mx-auto lg:my-8" />
       <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-body sm:text-center">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+          <span class="text-sm text-body text-gray-400 sm:text-center">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
           </span>
           <div class="flex mt-4 sm:justify-center sm:mt-0">
             <a href="#" class="text-body hover:text-heading">

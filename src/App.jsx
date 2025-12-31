@@ -22,7 +22,7 @@ const App = () => {
         <OurWork />
         <Teams />
         <ContactUs />
-        <Footer />
+        <Footer  theme={theme} setTheme={setTheme}  />
     
       </div>
     </div>
