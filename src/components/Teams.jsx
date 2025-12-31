@@ -18,6 +18,11 @@ const Teams=()=>{
 
                         <img src={team.image} className="w-12 h-12 rounded-full" alt="" />
 
+                        <div className="flex-1">
+                            <h3 className="font-bold text-sm">{team.name}</h3>
+                            <p className="text-xs opacity-60">{team.title}</p>
+                        </div>
+
                       </div>
                 ))}
              </div>
